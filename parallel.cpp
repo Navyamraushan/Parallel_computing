@@ -3,7 +3,7 @@
 
 int main() {
     // Parallel region with OpenMP
-    #pragma omp parallel private(4)
+    #pragma omp parallel
     {
         // Get the thread ID
         int thread_id = omp_get_thread_num();
