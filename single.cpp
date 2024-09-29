@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
         }
 
         int thread_id = omp_get_thread_num();
-        cout << "This is a parallel region printed by " << thread_id << endl;
+        cout << "This is a parallel region printed by (master) " << thread_id << endl;
     } /* end of parallel region */
 
     
