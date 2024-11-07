@@ -12,7 +12,11 @@ sudo apt install pfm
 cd Desktop/papi/src 
 
 mkdir build 
-./configure prefix=path/to/src       ( do chmmod +x configure if not working) 
+./configure --prefix=/home/adityasr/Desktop/papi-7.2.0b1/build      ( do chmmod +x configure if not working) 
+
+if it will ask for sudo ch kernel copy paste that command.. sudo sh
+
+then again run configure
 
 make 
 make install 
@@ -20,7 +24,7 @@ make install
 nano papi_env.env 
 
 -----> 
-
+may be instead of src its build
 export PATH=/home/adityasr/Desktop/papi-7.2.0b1/src/bin:$PATH
 export LD_LIBRARY_PATH=/home/adityasr/Desktop/papi-7.2.0b1/src/lib:$LD_LIBRARY_PATH
 
