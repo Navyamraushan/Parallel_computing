@@ -83,5 +83,5 @@ int main() {
     return 0;
 }
 // to ruln this file
-// mpic++ papi_openmp.cpp -o mcpp -lpapi -I/home/adityasr/Desktop/papi-7.2.0b1/src/bin/include
+// g++ papi_openmp.cpp -o mcpp -lpapi -I/home/adityasr/Desktop/papi-7.2.0b1/src/bin/include
 // mpirun -np 4 ./mcpp
