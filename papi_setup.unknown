@@ -1,0 +1,44 @@
+sudo apt update 
+sudo apt upgrade 
+
+sudo apt install synaptic 
+
+sudo apt install papi_tools
+sudo apt install pfm 
+
+cd Desktop/papi/src 
+
+mkdir build 
+./configure prefix=path/to/src       ( do chmmod +x configure if not working) 
+
+make 
+make install 
+
+nano papi_env.env 
+
+-----> 
+
+export PATH=/home/adityasr/Desktop/papi-7.2.0b1/src/bin:$PATH
+export LD_LIBRARY_PATH=/home/adityasr/Desktop/papi-7.2.0b1/src/lib:$LD_LIBRARY_PATH
+
+-----> 
+
+source papi_env.env
+which papi_avail
+
+----->
+
+should give the papi location
+
+-----> 
+
+
+# Running papi code within papi folder : 
+gcc filename.c -o filename -lpapi 
+./filename
+
+# from external folder 
+gcc filename.c -o filename -lpapi -I/address/to/papi_avail/include 
+./filename
+
+
